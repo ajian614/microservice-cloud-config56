@@ -1,0 +1,32 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+---
+server: 
+  port: 8201
+spring: 
+  profiles: dev
+  application: 
+    name: cloud-config-client-8201
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: cloud-config-client
+---
+server: 
+  port: 8202
+spring: 
+  profiles: test
+  application: 
+    name: cloud-config-client-8202
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: cloud-config-client
