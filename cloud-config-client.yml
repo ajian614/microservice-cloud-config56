@@ -22,7 +22,7 @@ server:
 spring: 
   profiles: test
   application: 
-    name: cloud-config-client-8202--java56-new
+    name: cloud-config-client-8202--java56-new2222
   cloud:
     consul:
       host: localhost
